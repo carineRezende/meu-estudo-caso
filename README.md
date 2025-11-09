@@ -42,6 +42,28 @@ As rotas são definidas pelo nome interno do *Stack Navigator*:
 
 ---
 
+## 🗂️ Estrutura de Pastas
+
+```bash
+meu-estudo-caso/
+├── web/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   ├── package.json
+│   └── vite.config.js
+└── mobile/
+    ├── App.js
+    ├── screens/
+    │   ├── Home.js
+    │   └── DetalheProd.js
+    ├── package.json
+    └── app.json
+```
+---
+
 ## 🔧 Instruções de Instalação e Execução (Passo a Passo)
 
 Certifique-se de ter o **Node.js** e o **npm** ou **yarn** instalados em sua máquina.
