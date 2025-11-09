@@ -42,11 +42,20 @@ As rotas são definidas pelo nome interno do *Stack Navigator*:
 
 ---
 
-## 🔧 Instruções de Instalação e Execução
+## 🔧 Instruções de Instalação e Execução (Passo a Passo)
 
 Certifique-se de ter o **Node.js** e o **npm** ou **yarn** instalados em sua máquina.
 
-### 🌐 Parte 1: Aplicação Web (`web/`)
+### 1. 📦 Configuração Inicial (Criação da Pasta Raiz)
+
+1.  **Crie a pasta principal** do projeto e acesse-a:
+    ```bash
+    mkdir meu-estudo-caso
+    cd meu-estudo-caso
+    ```
+    *Todos os comandos seguintes devem ser executados dentro deste diretório.*
+
+### 2. 🌐 Parte Web (`web/`)
 
 Os comandos abaixo criam o diretório `web/` e instalam tudo o que é necessário para a aplicação Web.
 
@@ -54,12 +63,12 @@ Os comandos abaixo criam o diretório `web/` e instalam tudo o que é necessári
     ```bash
     npm create vite@latest web -- --template react
     ```
-2.  **Acessar a Pasta e Instalar o Núcleo:**
+2.  **Acessar a Pasta Web e Instalar o Núcleo:**
     ```bash
     cd web
     npm install
     ```
-3.  **Instalar o Roteador:**
+3.  **Instalar o Roteador (`react-router-dom`):**
     ```bash
     npm install react-router-dom
     ```
@@ -69,21 +78,22 @@ Os comandos abaixo criam o diretório `web/` e instalam tudo o que é necessári
     ```
     *A aplicação Web estará rodando em `http://localhost:5173/`.*
 
-### 📱 Parte 2: Aplicação Mobile (`mobile/`)
+### 3. 📱 Parte Mobile (`mobile/`)
 
 Os comandos abaixo criam o diretório `mobile/` e instalam todas as dependências do React Navigation.
 
-1.  **Criação do Projeto Mobile (Expo):**
+1.  **Voltar para a Pasta Raiz** (`meu-estudo-caso`):
+    ```bash
+    cd ..
+    ```
+2.  **Criação do Projeto Mobile (Expo):**
     ```bash
     npx create-expo-app mobile
-    # OU, se usar o comando mais antigo e seguir o roteiro: expo init mobile
+    # OU: expo init mobile (Se estiver seguindo o roteiro original e já tiver o expo-cli instalado)
     ```
-2.  **Acessar a Pasta:**
+3.  **Acessar a Pasta Mobile e Instalar Dependências Base:**
     ```bash
     cd mobile
-    ```
-3.  **Instalar Dependências Base:**
-    ```bash
     npm install
     ```
 4.  **Instalar Core do React Navigation:**
