@@ -2,21 +2,21 @@
 
 ## 📝 Descrição do Projeto
 
-Este projeto é um **Estudo de Caso** que demonstra a implementação e o gerenciamento de rotas de navegação em dois ambientes de desenvolvimento distintos, que utilizam a mesma tecnologia principal (**React**):
+Este projeto é um **Estudo de Caso** que visa demonstrar a implementação e o gerenciamento de rotas de navegação em dois ambientes de desenvolvimento distintos, mas que utilizam a mesma tecnologia principal (**React**):
 
-1.  **Aplicação Web:** Implementada com **React + Vite** e roteamento via **React Router DOM**.
-2.  **Aplicação Mobile:** Implementada com **React Native + Expo** e roteamento via **React Navigation**.
+1.  **Aplicação Web:** Implementada com **React + Vite**.
+2.  **Aplicação Mobile:** Implementada com **React Native + Expo**.
 
-O objetivo funcional é simular um catálogo de produtos, navegando entre a **Lista de Produtos** e a **Tela de Detalhes** com estilização coesa no padrão **Dark Mode**.
+O objetivo funcional é simular um catálogo de produtos simples, permitindo a navegação clara entre a **Lista de Produtos** e a **Tela de Detalhes** de um produto específico. O projeto também consolida a organização do código e a estilização das interfaces (Web e Mobile) utilizando um tema coeso no padrão **Dark Mode**.
 
 ---
 
 ## 💻 Tecnologias e Dependências
 
-| Plataforma | Framework Base | Gerenciador de Rotas |
-| :--- | :--- | :--- |
-| **Web (`web/`)** | React (Vite) | **React Router DOM** |
-| **Mobile (`mobile/`)** | React Native (Expo) | **React Navigation Native Stack** |
+| Plataforma | Framework Base | Gerenciador de Rotas | Linguagem |
+| :--- | :--- | :--- | :--- |
+| **Web (`web/`)** | React (Vite) | **React Router DOM** | JavaScript/JSX |
+| **Mobile (`mobile/`)** | React Native (Expo) | **React Navigation Native Stack** | JavaScript |
 
 ---
 
@@ -24,17 +24,21 @@ O objetivo funcional é simular um catálogo de produtos, navegando entre a **Li
 
 ### 🌐 Aplicação Web (React Router DOM)
 
-| Rota | Componente |
-| :--- | :--- |
-| **`/`** | `ListaProd.jsx` |
-| **`/produto/:id`** | `DetalheProd.jsx` |
+As rotas são definidas com base na URL do navegador:
+
+| Rota | Componente | Descrição |
+| :--- | :--- | :--- |
+| **`/`** | `ListaProd.jsx` | Página inicial que exibe a lista completa de 20 produtos. |
+| **`/produto/:id`** | `DetalheProd.jsx` | Página de detalhes que carrega e exibe informações específicas do produto, usando o `:id` passado na URL. |
 
 ### 📱 Aplicação Mobile (React Navigation)
 
-| Nome da Rota | Componente |
-| :--- | :--- |
-| **`Home`** | `Home.js` |
-| **`Detalhe`** | `DetalheProd.js` |
+As rotas são definidas pelo nome interno do *Stack Navigator*:
+
+| Nome da Rota | Componente | Descrição |
+| :--- | :--- | :--- |
+| **`Home`** | `Home.js` | Tela inicial que exibe a lista de produtos (implementada com `FlatList`). |
+| **`Detalhe`** | `DetalheProd.js` | Tela de detalhes que recebe o `itemId` via `route.params` para exibir as informações do produto, com estilização customizada (botão e card). |
 
 ---
 
